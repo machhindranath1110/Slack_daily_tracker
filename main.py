@@ -183,7 +183,7 @@ scheduler = BackgroundScheduler()
 
 # Schedule Jobs **Sequentially**
 scheduler.add_job(clear_timesheets, "cron", hour=13, minute=15)  # Clear table at midnight
-scheduler.add_job(send_scheduled_message, "cron", hour=19, minute=0)  # Send message at 2:16 PM
+scheduler.add_job(send_scheduled_message, "cron", hour=19, minute=2)  # Send message at 7:00 PM
 schedule.every().day.at("10:00").do(send_reminders)  # Send reminders at 6:47 PM
 # schedule.every().day.at("13:30").do(daily_task_mail_HR)  # Send HR email at midnight
 scheduler.add_job(daily_task_mail_HR, "cron", hour=12, minute=00)
